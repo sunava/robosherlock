@@ -41,14 +41,16 @@ namespace rs
 namespace accessor
 {
 
+
 /**
  * Templated conversion utility method. Default implementation just casts to TargetT.
  */
 template<typename SourceT, typename TargetT>
 inline TargetT convert(const SourceT &value)
 {
-  return (TargetT) value;
+  return static_cast<TargetT>(value);
 }
+
 
 template<>
 inline std::string convert<uima::UnicodeStringRef, std::string>(const uima::UnicodeStringRef &str)
@@ -57,15 +59,15 @@ inline std::string convert<uima::UnicodeStringRef, std::string>(const uima::Unic
 }
 
 template<>
-inline UnicodeString convert<std::string, UnicodeString>(const std::string &str)
+inline icu::UnicodeString convert<std::string, icu::UnicodeString>(const std::string &str)
 {
-  return UnicodeString(str.c_str(), str.length(), (const char *)NULL);
+  return icu::UnicodeString(str.c_str(), str.length(), (const char *)NULL);
 }
 
 template<>
 inline uima::UnicodeStringRef convert<std::string, uima::UnicodeStringRef>(const std::string &str)
 {
-  return uima::UnicodeStringRef(UnicodeString(str.c_str(), str.length(), (const char *)NULL));
+  return uima::UnicodeStringRef(icu::UnicodeString(str.c_str(), str.length(), (const char *)NULL));
 }
 
 /**
@@ -118,7 +120,7 @@ struct Accessor<std::string>
 
   static void set(uima::FeatureStructure &fs, uima::Feature &feature, std::string value)
   {
-    fs.setStringValue(feature, convert<std::string, UnicodeString>(value));
+    fs.setStringValue(feature, convert<std::string, icu::UnicodeString>(value));
   }
 };
 

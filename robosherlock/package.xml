@@ -44,8 +44,6 @@
   <!--system-->
   <!--depend>rapidjson-dev              </depend-->
   <!--depend>libmongoclient-dev         </depend-->
-  <depend>mongodb 		             </depend>
-  <depend>mongodb-dev 		             </depend>
   <depend>yaml-cpp                   </depend>
   <depend>swi-prolog		         </depend>
   

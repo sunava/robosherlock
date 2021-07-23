@@ -25,7 +25,7 @@
 
 // RS
 #include <robosherlock/conversion/conversion.h>
-#include <robosherlock/types/pcl_types.h>
+#include <robosherlock/types/pcl_types.hpp>
 
 namespace rs
 {
