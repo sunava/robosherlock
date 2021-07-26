@@ -54,9 +54,6 @@ if($ENV{CPATH})
 endif()
 
 
-find_package(PythonInterp 2.7 REQUIRED)
-find_package(PythonLibs 2.7 REQUIRED)
-
 #############################################################################
 ## Add library macro                                                       ##
 #############################################################################
@@ -85,7 +82,7 @@ macro(generate_type_system)
     set(projects ${projects} ${arg}:${${arg}_NAMESPACE}:${${arg}_TYPESYSTEM_XML_PATH}:${${arg}_TYPESYSTEM_CPP_PATH})
   endforeach()
   
-  execute_process(COMMAND python2.7 ${script} ${projects})
+  execute_process(COMMAND python3 ${script} ${projects})
 endmacro(generate_type_system)
 
 #############################################################################

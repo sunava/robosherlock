@@ -48,7 +48,7 @@ namespace accessor
 template<typename SourceT, typename TargetT>
 inline TargetT convert(const SourceT &value)
 {
-  return static_cast<TargetT>(value);
+  return (const TargetT&)value;
 }
 
 

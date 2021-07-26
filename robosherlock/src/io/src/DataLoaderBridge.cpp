@@ -37,7 +37,7 @@
 #include <functional>
 #include <iterator>
 #include <sstream>
-
+#include <opencv2/imgcodecs.hpp>
 
 using namespace uima;
 
@@ -349,7 +349,7 @@ bool DataLoaderBridge::setData(uima::CAS &tcas, uint64_t ts)
       path = path_to_depth;
     }
 
-    this->depth = cv::imread(path,  CV_LOAD_IMAGE_ANYDEPTH);
+    this->depth = cv::imread(path,  cv::IMREAD_ANYDEPTH);
     cv::resize(depth, depth, imageSize, 0, 0, cv::INTER_NEAREST);
 
     if(depth.type() == CV_8UC1)

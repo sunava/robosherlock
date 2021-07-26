@@ -130,7 +130,7 @@ endif()
 
 
 
-find_package(Python COMPONENTS Interpreter Development)
+find_package(Python3 COMPONENTS Interpreter Development)
 
 ################################################################################
 ## CMake variables                                                            ##
