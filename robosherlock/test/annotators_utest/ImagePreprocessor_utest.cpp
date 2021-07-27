@@ -26,7 +26,7 @@ int preprocessingTest()
 {
 
   icu::UnicodeString ustrInputText;
-  cas->setDocumentText(uima::icu::UnicodeStringRef(ustrInputText));
+  cas->setDocumentText(uima::UnicodeStringRef(ustrInputText));
   std::cerr<<"processing CAS"<<std::endl;
 
   //uima::AnnotatorContext &annotContext = engine->getAnnotatorContext();
