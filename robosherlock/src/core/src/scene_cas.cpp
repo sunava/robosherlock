@@ -67,7 +67,7 @@ rs::Scene SceneCas::getScene(int cam_id)
   std::string view_name = appendCamIdToViewName(VIEW_SCENE, cam_id);
   if(!getFS(view_name.c_str(), fs))
   {
-    rs::Scene scene = rs::create<rs::Scene>(cas);
+    uima::FeatureStructure scene = rs::create<rs::Scene>(cas);
     setFS(view_name.c_str(), (uima::FeatureStructure)scene);
     return scene;
   }

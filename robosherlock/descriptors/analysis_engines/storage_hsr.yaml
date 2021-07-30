@@ -1,0 +1,12 @@
+ae:
+  name: StoragePipeline
+fixedflow:
+  - CollectionReader
+  - ImagePreprocessor
+
+StorageWriter:
+  -storagedb: 'Scenes' 
+  -enableViews: ['color_image_hd','depth_image_hd','camera_info','camera_info_hd','scene', 'cloud']
+  -clearStorageOnStart: true
+CollectionReader: 
+  -camera_config_files: ['config_hsr_camera.ini']

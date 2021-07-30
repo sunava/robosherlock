@@ -149,7 +149,7 @@ public:
     return type_;
   }
 
-  operator uima::FeatureStructure() const
+   operator uima::FeatureStructure() const
   {
     return fs_;
   }
