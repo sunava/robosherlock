@@ -227,7 +227,7 @@ void Visualizer::imageViewer()
         visualizationAnnotatorMgr->updateImage = false;
         visualizationAnnotatorMgr->getCurrentVisualizable()->drawImage(disp);
         cv::putText(disp, "Annotator: " + visualizationAnnotatorMgr->getCurrentVisualizableName(), pos, font, sizeText,
-                    color, lineText, CV_MSA);
+                    color, lineText, CV_AA);
         if (!headless_)
           cv::imshow(imageWindowName(*visualizationAnnotatorMgr), disp);
 
