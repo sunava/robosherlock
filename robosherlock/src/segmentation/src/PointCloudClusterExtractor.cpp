@@ -373,14 +373,17 @@ private:
                                 std::vector<pcl::PointIndices> &cluster_indices,
                                 const pcl::PointIndices::Ptr &prism_inliers)
   {
+
     std::vector<bool> ignore_labels;
+
     pcl::PointCloud<pcl::Label>::Ptr input_labels(new pcl::PointCloud<pcl::Label>);
 
     pcl::Label label;
-
-    ignore_labels.resize(2);
-    ignore_labels[0] = true;
-    ignore_labels[1] = false;
+    boost::shared_ptr<std::set<uint32_t>> exclude_labels = boost::make_shared<std::set<uint32_t>>();
+    exclude_labels->insert(1);
+    //ignore_labels.resize(2);
+    //ignore_labels[0] = true;
+    //ignore_labels[1] = false;
 
 
     input_labels->height = cloud->height;
@@ -408,7 +411,9 @@ private:
     pcl::EuclideanClusterComparator<PointT, pcl::Normal, pcl::Label>::Ptr ecc(new pcl::EuclideanClusterComparator<PointT, pcl::Normal, pcl::Label>());
     ecc->setInputCloud(cloud);
     ecc->setLabels(input_labels);
-    ecc->setExcludeLabels(ignore_labels);
+
+    ecc->setExcludeLabels(exclude_labels);
+
     ecc->setDistanceThreshold(cluster_tolerance, true);
     ecc->setInputNormals(normals);
     std::vector<pcl::PointIndices> cluster_i;
