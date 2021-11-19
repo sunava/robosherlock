@@ -200,7 +200,7 @@ private:
   template <class T>
   void set(const char* name, const T& input, const std::true_type&)
   {
-    setFS(name, (uima::FeatureStructure)input);
+     setFS(name, (T&)input);
   }
 
   template <class T>
@@ -257,7 +257,7 @@ private:
 
     for (int i = 0; i < input.size(); ++i)
     {
-      array.set(i, (uima::FeatureStructure)input[i]);
+      array.set(i, input[i]);
     }
     setFS(name, array);
   }

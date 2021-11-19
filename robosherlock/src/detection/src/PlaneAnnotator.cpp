@@ -679,9 +679,9 @@ private:
         cv::projectPoints(axis, rotation, translation, cameraMatrix, distortionCoefficients, pointsImage);
 
         // draw the axes on the colored image
-        cv::line(disp, pointsImage[0], pointsImage[1], CV_RGB(255, 0, 0), 2, CV_AA);
-        cv::line(disp, pointsImage[0], pointsImage[2], CV_RGB(0, 255, 0), 2, CV_AA);
-        cv::line(disp, pointsImage[0], pointsImage[3], CV_RGB(0, 0, 255), 2, CV_AA);
+        cv::line(disp, pointsImage[0], pointsImage[1], CV_RGB(255, 0, 0), 2, cv::LINE_AA);
+        cv::line(disp, pointsImage[0], pointsImage[2], CV_RGB(0, 255, 0), 2, cv::LINE_AA);
+        cv::line(disp, pointsImage[0], pointsImage[3], CV_RGB(0, 0, 255), 2, cv::LINE_AA);
         break;
       case PCL:
       case FILE:

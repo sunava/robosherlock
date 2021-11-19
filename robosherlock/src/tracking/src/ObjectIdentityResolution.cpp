@@ -753,7 +753,7 @@ private:
       oss << "Object: " << i;
 
       cv::rectangle(disp, roi, rs::common::cvScalarColors[i % rs::common::numberOfColors]);
-      cv::putText(disp, oss.str(), roi.tl() + cv::Point(5, -15), cv::FONT_HERSHEY_COMPLEX_SMALL, 1.0, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, CV_AA);
+      cv::putText(disp, oss.str(), roi.tl() + cv::Point(5, -15), cv::FONT_HERSHEY_COMPLEX_SMALL, 1.0, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, cv::LINE_AA);
     }
   }
 

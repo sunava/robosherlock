@@ -380,28 +380,28 @@
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 
-<!-- http://knowrob.org/kb/rs_components.owl#RsCvPoint -->
-<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#RsCvPoint">
+<!-- http://knowrob.org/kb/rs_components.owl#Rscv::Point -->
+<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#Rscv::Point">
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 
-<!-- http://knowrob.org/kb/rs_components.owl#RsCvPoint2f -->
-<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#RsCvPoint2f">
+<!-- http://knowrob.org/kb/rs_components.owl#Rscv::Point2f -->
+<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#Rscv::Point2f">
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 
-<!-- http://knowrob.org/kb/rs_components.owl#RsCvPoint2d -->
-<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#RsCvPoint2d">
+<!-- http://knowrob.org/kb/rs_components.owl#Rscv::Point2d -->
+<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#Rscv::Point2d">
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 
-<!-- http://knowrob.org/kb/rs_components.owl#RsCvPoint3f -->
-<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#RsCvPoint3f">
+<!-- http://knowrob.org/kb/rs_components.owl#Rscv::Point3f -->
+<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#Rscv::Point3f">
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 
-<!-- http://knowrob.org/kb/rs_components.owl#RsCvPoint3d -->
-<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#RsCvPoint3d">
+<!-- http://knowrob.org/kb/rs_components.owl#Rscv::Point3d -->
+<owl:Class rdf:about="http://knowrob.org/kb/rs_components.owl#Rscv::Point3d">
     <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/rs_components.owl#RoboSherlockType"/>
 </owl:Class>
 

@@ -437,7 +437,7 @@ public:
 
     //cv::rectangle(disp, cv::Rect(sideBorder - 1, topBorder - 1, diagramSize.width + 2, diagramSize.height + 2), borderColor, 1);
     cv::line(disp, cv::Point(sideBorder, topBorder + diagramSize.height), cv::Point(sideBorder + diagramSize.width, topBorder + diagramSize.height), forgroundColor, 1);
-    cv::putText(disp, title, cvPoint(300, 15), cv::FONT_HERSHEY_SIMPLEX, 0.5, forgroundColor, 1, CV_AA);
+    cv::putText(disp, title, cv::Point(300, 15), cv::FONT_HERSHEY_SIMPLEX, 0.5, forgroundColor, 1, cv::LINE_AA);
 
     // drawing the diagram
     float maxValue = 0;
@@ -467,7 +467,7 @@ public:
         p.x = sideBorder + step * j;
         p.y = (topBorder + diagramSize.height) - diagramSize.height * (descriptor.histogram[j] / maxValue);
       }
-      cv::polylines(disp, points, false, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, CV_AA);
+      cv::polylines(disp, points, false, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, cv::LINE_AA);
     }
 
     // thumbnails for clusters

@@ -202,7 +202,7 @@ private:
       std::ostringstream oss;
       oss << name << " (" << timing[i] / frames << " ms)";
       cv::Point pos(5, height + text * (i + 1) - 5);
-      cv::putText(disp, oss.str(), pos, cv::FONT_HERSHEY_SIMPLEX, 0.5, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, CV_AA);
+      cv::putText(disp, oss.str(), pos, cv::FONT_HERSHEY_SIMPLEX, 0.5, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, cv::LINE_AA);
     }
 
     for(size_t i = 0; i < frames; ++i)
@@ -218,7 +218,7 @@ private:
     for(size_t i = 10; i < frames; i += 10)
     {
       int x = (int)(((i * width) / (double)frames) + 0.5);
-      cv::line(disp, cv::Point(x, 0), cv::Point(x, height), CV_RGB(127, 127, 127), 1, CV_AA);
+      cv::line(disp, cv::Point(x, 0), cv::Point(x, height), CV_RGB(127, 127, 127), 1, cv::LINE_AA);
     }
 
     for(size_t i = 0; i < algorithms; ++i)
@@ -230,7 +230,7 @@ private:
       for(size_t j = 1; j < frames; ++j)
       {
         p1 = line[j];
-        cv::line(disp, p0, p1, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, CV_AA);
+        cv::line(disp, p0, p1, rs::common::cvScalarColors[i % rs::common::numberOfColors], 1, cv::LINE_AA);
         p0 = p1;
       }
     }
@@ -285,7 +285,7 @@ private:
     for(size_t i = 10; i < frames; i += 10)
     {
       int x = (int)(((i * width) / (double)frames) + 0.5);
-      cv::line(disp, cv::Point(x, 0), cv::Point(x, height), CV_RGB(127, 127, 127), 1, CV_AA);
+      cv::line(disp, cv::Point(x, 0), cv::Point(x, height), CV_RGB(127, 127, 127), 1, cv::LINE_AA);
     }
 
     cv::Point p0, p1;
@@ -293,7 +293,7 @@ private:
     for(size_t i = 1; i < frames; ++i)
     {
       p1 = line[i];
-      cv::line(disp, p0, p1, CV_RGB(255, 0, 0), 1, CV_AA);
+      cv::line(disp, p0, p1, CV_RGB(255, 0, 0), 1, cv::LINE_AA);
       p0 = p1;
     }
   }
