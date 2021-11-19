@@ -111,7 +111,7 @@ void SceneCas::setFS(const char *name, const uima::FeatureStructure &fs)
   }
   const std::string mime = std::string("application/x-") + name;
 
-  view->setSofaDataArray(fs, UnicodeString::fromUTF8(mime));
+  view->setSofaDataArray(fs, icu_66::UnicodeString::fromUTF8(mime));
 }
 
 std::string SceneCas::getCASAsString(uima::CAS &tcas, bool saveWithPointCloud)

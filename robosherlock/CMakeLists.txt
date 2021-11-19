@@ -80,7 +80,7 @@ endif()
 
 find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)
-find_package(Boost REQUIRED COMPONENTS system thread date_time python)
+find_package(Boost REQUIRED COMPONENTS system thread date_time)
 
 find_package(APR REQUIRED)
 find_package(ICUUC REQUIRED)
